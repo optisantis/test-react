@@ -1,0 +1,26 @@
+/**
+ * Vous pouvez utiliser le code suivant pour la typographie monospace :
+ * ```
+ * SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+ * ```
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(41, 45, 62);
+  font-size: 16px;
+  color: rgb(9, 211, 172);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
