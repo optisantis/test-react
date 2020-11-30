@@ -31,9 +31,9 @@
 
 Dans ce test votre but sera de créer un jeu [Memory](https://fr.wikipedia.org/wiki/Memory_(jeu)) en utilisant le plus de concept possible de React, tout en gardant une cohérence dans l'utilisation de ces concepts. 
 
-Ce test est séparé en 5 sections, vous n'êtes pas obligés de toutes les réalisées, mais il est fortement conseillé de réalisé au minimum les sections 1, 2 et 5.
+Ce test est séparé en 5 sections, vous n'êtes pas obligé de toutes les réalisées, mais il est fortement conseillé de réaliser au minimum les sections 1, 2 et 5.
 
-Tous les fichiers de configuration ont déjà été créer pour vous permettre de vous concentrer sur le code, si vous avez des problèmes veuillez vous référer à la [documentation de create-react-app](https://create-react-app.dev/docs/troubleshooting).
+Tous les fichiers de configuration ont déjà été créés pour vous permettre de vous concentrer sur le code, si vous avez des problèmes veuillez vous référer à la [documentation de create-react-app](https://create-react-app.dev/docs/troubleshooting).
 
 Pour lancer le test dans votre navigateur il vous suffit de lancer `yarn start` ou `npm start` dans votre terminal. [Voir la documentation create-react-app](https://create-react-app.dev/docs/getting-started).
 
@@ -42,9 +42,9 @@ En bonne pratique nous vous conseillons de créer un `commit` ou `tag` à chaque
 ### Déroulement
 
 1. Clonner le dépôt git
-2. Créer une brnache pour votre test comme suit `test/{votre-nom}`
-3. Une fois terminer, créer une PR sur la branche `master`
-4. Nous reviendrons vers vous pour les remarques dans un entretient individuel
+2. Créer une branche pour votre test comme suit `test/{votre-nom}`
+3. Une fois terminé, créer une PR sur la branche `master`
+4. Nous reviendrons vers vous pour les remarques dans un entretien individuel
 
 ---
 
@@ -56,7 +56,7 @@ Tester vos connaissances d'intégration (sémantique HTML, accéssibilité, css)
 
 ### 📝 Notes
 
-Aucunes libraires de composants tiers n'est autorisées pour cette section, tel que _Bootstrap_ ou _Material UI_, vous devrez créer les composants et leurs styles "from scratch".
+Aucunes libraire de composants tiers n'est autorisée pour cette section, tel que _Bootstrap_ ou _Material UI_, vous devrez créer les composants et leurs styles "from scratch".
 
 En interne nous utilisons [`styled-components`](https://styled-components.com), il est donc recommendé d'utiliser cette librairie pour le style des composants. Cependant vous pouvez aussi utiliser une autre librairie ou un autre language (css, sass, postcss, emotion, ...), nous voulons surtout connaitre votre niveau en CSS à travers cet exercice.
 
@@ -68,7 +68,7 @@ Vous êtes libre de créer autant des dossiers et fichiers que vous considérez 
 
 ### 🎉 Final
 
-Voici l'intégration final à réaliser:
+Voici l'intégration finale à réaliser:
 
 <img src=".docs/01/final.png" width="70%" />
 
@@ -87,27 +87,27 @@ Tester vos connaissances sur les concepts d'états (`state`) d'un composant. Ave
 
 Les cartes ont _trois_ états :
 
-- `idle`: La carte n'as pas été cliqué, un background unie blanc est visible.
+- `idle`: La carte n'a pas été cliquée, un background uni blanc est visible.
   
   <img src="./.docs/components/card-idle.png" width="100px" />
   
-- `active`: La carte a été cliqué, on affiche l'image du fruit.
+- `active`: La carte a été cliquée, on affiche l'image du fruit.
   
   <img src="./.docs/components/card-active.png" width="100px" />
   
-- `found`: La carte et sa paire ou été trouvé, il n'est plus possible de cliquer sur la carte.
+- `found`: La carte et sa paire ont été trouvées, il n'est plus possible de cliquer sur la carte.
   
   <img src="./.docs/components/card-found.png" width="100px" />
 
 #### Compteur de coups
 
-Lorsque **deux** cartes sont retournés le compteur de coups doit augmenté de `1`.
+Lorsque **deux** cartes sont retournées le compteur de coups doit augmenté de `1`.
 
 <img src="./.docs/components/moves.png" width="200px" />
 
 #### Statut du jeu
 
-_Trois_ états du jeu sont disponible:
+_Trois_ états du jeu sont disponibles:
 
 - `new`: tous les états sont réinitialisés, le timer doit afficher: `00:00`, le compteur de coups: `0` et toutes les cartes doivent être `idle`.
   
@@ -153,7 +153,7 @@ Vous devez installer typescript, soit manuellement, soit grâce à [create-react
 
 Une fois typescript installé, vous devez modifier vos fichiers en `.ts` ou `.tsx`, pour ensuite créer et utiliser les types dans vos composants.
 
-> 🚨 Il est possible que la version de typescript installé localement, rentre en conflit avec celle installé sur votre IDE par défaut;
+> 🚨 Il est possible que la version de typescript installé localement, rentre en conflit avec celle installée sur votre IDE par défaut;
 >
 > Sur vscode par exemple il vous faudra changer la version pour utiliser celle de votre `workspace`. Pour ce faire il faut aller dans un fichier `.ts` ou `.tsx`, ensuite faire la combinaise clavier `cmd`+`shfit`+`p`, puis taper `TypeScript: Select TypeScript Version...`, et enfin sélectionner la version `Workspace` ou une version supérieure à `4.1.x`.
 
@@ -185,7 +185,7 @@ Pour lancer un test il suffit de lancer `yarn test` dans votre terminal.
 
 ## Remarques
 
-Cette section n'est pas un exercice, si vous avez des remarques sur le tests ou sur le code que vous avez écris, nous vous recommandons de les ajouter lors de votre pull request.
+Cette section n'est pas un exercice, si vous avez des remarques sur le tests ou sur le code que vous avez écrit, nous vous recommandons de les ajouter lors de votre pull request.
 
 Si vous n'avez pas eu le temps de faire toutes les sections ou juste en parties, nous vous conseillons d'ajouter quelques lignes pour nous expliquer pourquoi.
 
