@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Tile from "./Tile";
-import tileDefaults from '../images/tileDefaults';
 import { shuffle, replaceAtIndex } from '../utils';
 
 const StyledGrid = styled.div`
@@ -26,13 +25,7 @@ const ResetInput = styled.input`
   cursor: pointer;
 `;
 
-// dupplicate tiles and shuffle
-const resetGrid = () => {
-  return shuffle([
-    ...Object.keys(tileDefaults),
-    ...Object.keys(tileDefaults)
-  ]).map((item, index) => Object.assign({}, tileDefaults[item], { index }));
-}
+
 
 const Grid = ({
   setTiles,
@@ -43,10 +36,11 @@ const Grid = ({
   setGameState,
   startGame,
   currentTiles,
-  setCurrentTiles
+  setCurrentTiles,
+  resetGame
 }) => {
   if(tiles.length === 0) {
-    setTiles(resetGrid());
+    resetGame();
     return(
       <div />
     )
@@ -56,19 +50,14 @@ const Grid = ({
   if(currentTiles.length === 2) {
     const newState = currentTiles[0].id === currentTiles[1].id ? 'found' : 'idle';
 
-    // Hide current tiles if not identical, else set to found
-    // replaceAtIndex(
-    //   tiles,
-    //   tiles.indexOf(currentTiles[1]),
-    //   Object.assign({}, currentTiles[1], { state: newState })
-    // )
     setTries(tries + 1);
 
-
+    // clear current tiles
     setCurrentTiles([]);
 
     const timeout = newState === 'idle' ? 800 : 0;
-    
+
+    // Hide current tiles if not identical, else set to found
     setTimeout(function() {
       setTiles(
         replaceAtIndex(
@@ -104,7 +93,7 @@ const Grid = ({
       </StyledGrid>
 
       <ResetInput
-        onClick={() => setTiles(resetGrid())}
+        onClick={ resetGame }
         type="button"
         value="Réinitialiser"
       />
