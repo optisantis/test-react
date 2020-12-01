@@ -47,33 +47,6 @@ const Grid = ({
     )
   }
 
-  // Check current tiles
-  if(currentTiles.length === 2) {
-    const newState = currentTiles[0].id === currentTiles[1].id ? 'found' : 'idle';
-
-    setTries(tries + 1);
-
-    // clear current tiles
-    setCurrentTiles([]);
-
-    const timeout = newState === 'idle' ? 800 : 0;
-
-    // Hide current tiles if not identical, else set to found
-    setTimeout(function() {
-      setTiles(
-        replaceAtIndex(
-          replaceAtIndex(
-            tiles,
-            tiles.indexOf(currentTiles[1]),
-            Object.assign({}, currentTiles[1], { state: newState })
-          ),
-          tiles.indexOf(currentTiles[0]),
-          Object.assign({}, currentTiles[0], { state: newState })
-        )
-      )
-    }, timeout);
-  }
-
   // Check if grid is completed
   if(tiles.filter(tile => tile.state === 'found').length === tiles.length) {
     stopGame();
@@ -92,7 +65,9 @@ const Grid = ({
               startGame,
               gameState,
               currentTiles,
-              setCurrentTiles
+              setCurrentTiles,
+              setTries,
+              tries
             }}
           />
         )) }

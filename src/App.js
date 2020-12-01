@@ -58,6 +58,29 @@ export default function Memory() {
     }
   }, [timer]);
 
+  // Check if tiles are identical
+  useEffect(() => {
+    if(currentTiles.length === 2) {
+      const newState = currentTiles[0].id === currentTiles[1].id ? 'found' : 'idle';
+      const timeoutMs = newState === 'found' ? 0 : 800;
+
+      setTries(tries + 1);
+
+      // Hide current tiles if not identical, else set to found
+      setTimeout(function() {
+        setCurrentTiles([]);
+        setTiles(
+          tiles.map(tile => {
+            if(tile.index === currentTiles[0].index || tile.index === currentTiles[1].index) {
+              return Object.assign({}, tile, { state: newState })
+            }
+            return tile;
+          })
+        );
+      }, timeoutMs)
+    }
+  }, [currentTiles]);
+
   return (
     <main>
       <Header tries={ tries } timer={ timer } />

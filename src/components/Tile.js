@@ -24,8 +24,16 @@ const Tile = ({
   startGame,
   gameState,
   currentTiles,
-  setCurrentTiles
+  setCurrentTiles,
+  setTries,
+  tries
 }) => {
+
+  const checkIdentical = () => {
+    if(currentTiles.length === 2) {
+
+    }
+  }
   const handleClick = () => {
     if(gameState === 'new') {
       startGame();
@@ -37,6 +45,7 @@ const Tile = ({
       const index = tiles.indexOf(tile);
 
       setTiles(replaceAtIndex(tiles, index, newTile));
+
       setCurrentTiles([...currentTiles, newTile]);
     }
   }
