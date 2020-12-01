@@ -23,6 +23,7 @@ const Card = styled.img`
   height: 100%;
   width: 100%;
   border-radius: 0.5em;
+  cursor: pointer;
 `;
 
 
