@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Tile from "./Tile";
+import tileDefaults from '../images/tileDefaults';
+import { shuffle } from '../utils';
 
 const StyledGrid = styled.div`
   display: grid;
@@ -24,30 +26,27 @@ const ResetInput = styled.input`
   cursor: pointer;
 
 `;
+const resetGrid = () => {
+  return shuffle([
+    ...Object.keys(tileDefaults),
+    ...Object.keys(tileDefaults)
+  ]).map(item => tileDefaults[item]);
+}
+const Grid = () => {
+  // dupplicate tiles and shuffle
+  const tiles = resetGrid();
 
-const Grid = () => (
-  <div>
-    <StyledGrid>
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-      <Tile />
-    </StyledGrid>
+  return (
+    <div>
+      <StyledGrid>
+        { tiles.map(tile => (
+          <Tile tile={ tile } />
+        )) }
+      </StyledGrid>
 
-    <ResetInput type="button" value="Réinitialiser"/>
-  </div>
-);
+      <ResetInput type="button" value="Réinitialiser"/>
+    </div>
+  )
+};
 
 export default Grid;

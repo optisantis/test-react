@@ -1,20 +1,5 @@
 import styled from 'styled-components';
-
-import apple from "../images/apple.png";
-import avocado from "../images/avocado.png";
-import banana from "../images/banana.png";
-import corn from "../images/corn.png";
-import lemon from "../images/lemon.png";
-import lettuce from "../images/lettuce.png";
-import onion from "../images/onion.png";
-import strawberry from "../images/strawberry.png";
-
-const tileImages = {
-  apple, avocado, banana, corn, lemon, lettuce, onion, strawberry
-}
-
-const StyledTile = styled.div`
-`;
+import tileDefaults from '../images/tileDefaults';
 
 const Card = styled.img`
   object-fit: cover;
@@ -27,10 +12,8 @@ const Card = styled.img`
 `;
 
 
-const Tile = () => (
-
-    <Card src={tileImages['apple']} />
-
+const Tile = ({ tile }) => (
+  <Card src={ tile.image } />
 );
 
 export default Tile;
