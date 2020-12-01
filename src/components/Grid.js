@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Tile from "./Tile";
 import tileDefaults from '../images/tileDefaults';
-import { shuffle } from '../utils';
+import { shuffle, replaceAtIndex } from '../utils';
 
 const StyledGrid = styled.div`
   display: grid;
@@ -31,7 +31,7 @@ const resetGrid = () => {
   return shuffle([
     ...Object.keys(tileDefaults),
     ...Object.keys(tileDefaults)
-  ]).map(item => tileDefaults[item]);
+  ]).map((item, index) => Object.assign({}, tileDefaults[item], { index }));
 }
 
 const Grid = ({
@@ -41,7 +41,9 @@ const Grid = ({
   setTries,
   gameState,
   setGameState,
-  startGame
+  startGame,
+  currentTiles,
+  setCurrentTiles
 }) => {
   if(tiles.length === 0) {
     setTiles(resetGrid());
@@ -49,6 +51,32 @@ const Grid = ({
       <div />
     )
   }
+
+  // Check current tiles
+  if(currentTiles.length === 2) {
+    const newState = currentTiles[0].id === currentTiles[1].id ? 'found' : 'idle';
+
+    // Hide current tiles if not identical, else set to found
+    // replaceAtIndex(
+    //   tiles,
+    //   tiles.indexOf(currentTiles[1]),
+    //   Object.assign({}, currentTiles[1], { state: newState })
+    // )
+    setTries(tries + 1);
+    setCurrentTiles([]);
+    setTiles(
+      replaceAtIndex(
+        replaceAtIndex(
+          tiles,
+          tiles.indexOf(currentTiles[1]),
+          Object.assign({}, currentTiles[1], { state: newState })
+        ),
+        tiles.indexOf(currentTiles[0]),
+        Object.assign({}, currentTiles[0], { state: newState })
+      )
+    )
+  }
+
   return (
     <div>
       <StyledGrid>
@@ -60,7 +88,9 @@ const Grid = ({
               setTiles,
               tiles,
               startGame,
-              gameState
+              gameState,
+              currentTiles,
+              setCurrentTiles
             }}
           />
         )) }

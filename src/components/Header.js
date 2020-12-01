@@ -7,10 +7,10 @@ const StyledHeader = styled.div`
   width: 40em;
 `;
 
-const Header = () => (
+const Header = ({tries}) => (
   <StyledHeader>
     <HeaderItem title="Temps" number="00:00" />
-    <HeaderItem title="Nombre de coups" number="0" />
+    <HeaderItem title="Nombre de coups" number={tries} />
 
   </StyledHeader>
 );

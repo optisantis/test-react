@@ -12,12 +12,12 @@ const defaultTile = {
 }
 
 export default {
-  apple: Object.assign({ image: apple }, defaultTile),
-  avocado: Object.assign({ image: avocado }, defaultTile),
-  banana: Object.assign({ image: banana }, defaultTile),
-  corn: Object.assign({ image: corn }, defaultTile),
-  lemon: Object.assign({ image: lemon }, defaultTile),
-  lettuce: Object.assign({ image: lettuce }, defaultTile),
-  onion: Object.assign({ image: onion }, defaultTile),
-  strawberry: Object.assign({ image: strawberry }, defaultTile)
+  apple: Object.assign({ id: 'apple', image: apple }, defaultTile),
+  avocado: Object.assign({ id: 'avocado', image: avocado }, defaultTile),
+  banana: Object.assign({ id: 'banana', image: banana }, defaultTile),
+  corn: Object.assign({ id: 'corn', image: corn }, defaultTile),
+  lemon: Object.assign({ id: 'lemon', image: lemon }, defaultTile),
+  lettuce: Object.assign({ id: 'lettuce', image: lettuce }, defaultTile),
+  onion: Object.assign({ id: 'onion', image: onion }, defaultTile),
+  strawberry: Object.assign({ id: 'strawberry', image: strawberry }, defaultTile)
 };

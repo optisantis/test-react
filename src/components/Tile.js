@@ -13,7 +13,15 @@ const Card = styled.img`
 `;
 
 
-const Tile = ({ tile, setTiles, tiles, startGame, gameState }) => {
+const Tile = ({
+  tile,
+  setTiles,
+  tiles,
+  startGame,
+  gameState,
+  currentTiles,
+  setCurrentTiles
+}) => {
   const handleClick = () => {
     if(gameState === 'new') {
       startGame();
@@ -23,8 +31,9 @@ const Tile = ({ tile, setTiles, tiles, startGame, gameState }) => {
     if(tile.state === 'idle') {
       const newTile = Object.assign({}, tile, { state: 'active' });
       const index = tiles.indexOf(tile);
-      console.log(newTile);
+
       setTiles(replaceAtIndex(tiles, index, newTile));
+      setCurrentTiles([...currentTiles, newTile]);
     }
   }
   return (

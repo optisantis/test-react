@@ -11,6 +11,7 @@ export default function Memory() {
   const [gameState, setGameState] = useState('new');
   const [tries, setTries] = useState(0);
   const [tiles, setTiles] = useState([]);
+  const [currentTiles, setCurrentTiles] = useState([]);
 
   const startGame = () => {
     setGameState('running');
@@ -20,7 +21,7 @@ export default function Memory() {
   }
   return (
     <main>
-      <Header />
+      <Header tries={ tries } />
       <Instructions>
         Cliquez sur une carte pour commencer
       </Instructions>
@@ -32,7 +33,9 @@ export default function Memory() {
           setTries,
           tiles,
           setTiles,
-          startGame
+          startGame,
+          currentTiles,
+          setCurrentTiles
         }}
       />
     </main>
