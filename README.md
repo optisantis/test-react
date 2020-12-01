@@ -31,7 +31,7 @@
 
 Dans ce test votre but sera de créer un jeu [Memory](https://fr.wikipedia.org/wiki/Memory_(jeu)) en utilisant le plus de concept possible de React, tout en gardant une cohérence dans l'utilisation de ces concepts. 
 
-Ce test est séparé en 5 sections, vous n'êtes pas obligé de toutes les réalisées, mais il est fortement conseillé de réaliser au minimum les sections 1, 2 et 5.
+Ce test est séparé en 5 sections, vous n'êtes pas obligé de toutes les réalisées, mais il est fortement conseillé de réaliser au minimum les sections 1, 2 et la dernière section "Remarques".
 
 Tous les fichiers de configuration ont déjà été créés pour vous permettre de vous concentrer sur le code, si vous avez des problèmes veuillez vous référer à la [documentation de create-react-app](https://create-react-app.dev/docs/troubleshooting).
 
