@@ -1,3 +1,9 @@
+import Grid from "./components/Grid";
+
 export default function Memory() {
-  return <main>Votre Memory ici</main>;
+  return (
+    <main>
+      <Grid />
+    </main>
+  );
 }
