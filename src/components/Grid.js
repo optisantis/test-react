@@ -34,19 +34,35 @@ const resetGrid = () => {
   ]).map(item => tileDefaults[item]);
 }
 
-const Grid = ({ setTiles, tiles }) => {
+const Grid = ({
+  setTiles,
+  tiles,
+  tries,
+  setTries,
+  gameState,
+  setGameState,
+  startGame
+}) => {
   if(tiles.length === 0) {
     setTiles(resetGrid());
     return(
       <div />
     )
   }
-
   return (
     <div>
       <StyledGrid>
         { tiles.map(tile => (
-          <Tile tile={ tile } />
+          <Tile
+            tile={ tile }
+            {...{
+              tile,
+              setTiles,
+              tiles,
+              startGame,
+              gameState
+            }}
+          />
         )) }
       </StyledGrid>
 

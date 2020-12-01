@@ -6,6 +6,15 @@ const shuffle = (a) => {
   return a;
 }
 
+const replaceAtIndex = (array, index, item) => {
+  return [
+    ...array.slice(0, index),
+    item,
+    ...array.slice(index + 1, array.length)
+  ]
+}
+
 export {
-  shuffle
+  shuffle,
+  replaceAtIndex
 }

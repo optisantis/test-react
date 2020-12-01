@@ -12,7 +12,12 @@ export default function Memory() {
   const [tries, setTries] = useState(0);
   const [tiles, setTiles] = useState([]);
 
-
+  const startGame = () => {
+    setGameState('running');
+    setTiles(tiles.map(tile => {
+      tile.state = 'idle';
+    }))
+  }
   return (
     <main>
       <Header />
@@ -26,7 +31,8 @@ export default function Memory() {
           tries,
           setTries,
           tiles,
-          setTiles
+          setTiles,
+          startGame
         }}
       />
     </main>
