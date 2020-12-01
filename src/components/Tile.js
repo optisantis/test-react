@@ -10,6 +10,10 @@ const Card = styled.img`
   width: 100%;
   border-radius: 0.5em;
   cursor: pointer;
+  filter: brightness(${props => props.brightness || 1});
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
 
@@ -36,8 +40,13 @@ const Tile = ({
       setCurrentTiles([...currentTiles, newTile]);
     }
   }
+  const brightness = {
+    found: 0.8,
+    active: 1,
+    idle: 100
+  }
   return (
-    <Card src={ tile.image } state={ tile.state } onClick={ handleClick } />
+    <Card src={ tile.image } brightness={ brightness[tile.state] } state={ tile.state } onClick={ handleClick } />
   )
 };
 

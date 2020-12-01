@@ -63,18 +63,25 @@ const Grid = ({
     //   Object.assign({}, currentTiles[1], { state: newState })
     // )
     setTries(tries + 1);
+
+
     setCurrentTiles([]);
-    setTiles(
-      replaceAtIndex(
+
+    const timeout = newState === 'idle' ? 800 : 0;
+    
+    setTimeout(function() {
+      setTiles(
         replaceAtIndex(
-          tiles,
-          tiles.indexOf(currentTiles[1]),
-          Object.assign({}, currentTiles[1], { state: newState })
-        ),
-        tiles.indexOf(currentTiles[0]),
-        Object.assign({}, currentTiles[0], { state: newState })
+          replaceAtIndex(
+            tiles,
+            tiles.indexOf(currentTiles[1]),
+            Object.assign({}, currentTiles[1], { state: newState })
+          ),
+          tiles.indexOf(currentTiles[0]),
+          Object.assign({}, currentTiles[0], { state: newState })
+        )
       )
-    )
+    }, timeout);
   }
 
   return (
