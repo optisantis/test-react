@@ -32,7 +32,7 @@ const Tile = ({
     }
 
     // Set tile active on click
-    if(tile.state === 'idle') {
+    if(tile.state === 'idle' && currentTiles.length < 2) {
       const newTile = Object.assign({}, tile, { state: 'active' });
       const index = tiles.indexOf(tile);
 

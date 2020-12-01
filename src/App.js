@@ -43,6 +43,11 @@ export default function Memory() {
     }))
   }
 
+  const stopGame = () => {
+    setGameState('finish');
+    clearTimeout(timeout);
+  }
+
   const startTimer = () => {
     setTimer(timer + 1);
   }
@@ -70,7 +75,8 @@ export default function Memory() {
           startGame,
           currentTiles,
           setCurrentTiles,
-          resetGame
+          resetGame,
+          stopGame
         }}
       />
     </main>

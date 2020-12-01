@@ -37,7 +37,8 @@ const Grid = ({
   startGame,
   currentTiles,
   setCurrentTiles,
-  resetGame
+  resetGame,
+  stopGame
 }) => {
   if(tiles.length === 0) {
     resetGame();
@@ -71,6 +72,11 @@ const Grid = ({
         )
       )
     }, timeout);
+  }
+
+  // Check if grid is completed
+  if(tiles.filter(tile => tile.state === 'found').length === tiles.length) {
+    stopGame();
   }
 
   return (
