@@ -24,17 +24,23 @@ const ResetInput = styled.input`
   color: rgb(41, 45, 62);
   border: none;
   cursor: pointer;
-
 `;
+
+// dupplicate tiles and shuffle
 const resetGrid = () => {
   return shuffle([
     ...Object.keys(tileDefaults),
     ...Object.keys(tileDefaults)
   ]).map(item => tileDefaults[item]);
 }
-const Grid = () => {
-  // dupplicate tiles and shuffle
-  const tiles = resetGrid();
+
+const Grid = ({ setTiles, tiles }) => {
+  if(tiles.length === 0) {
+    setTiles(resetGrid());
+    return(
+      <div />
+    )
+  }
 
   return (
     <div>
@@ -44,7 +50,11 @@ const Grid = () => {
         )) }
       </StyledGrid>
 
-      <ResetInput type="button" value="Réinitialiser"/>
+      <ResetInput
+        onClick={() => setTiles(resetGrid())}
+        type="button"
+        value="Réinitialiser"
+      />
     </div>
   )
 };
