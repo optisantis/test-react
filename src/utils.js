@@ -8,20 +8,6 @@ const shuffle = (a) => {
   return a;
 }
 
-const replaceAtIndex = (array, index, item) => {
-
-  if(_.isUndefined(item) || _.isUndefined(index) || _.isEmpty(array) || index < 0) {
-    return array;
-  }
-
-  return [
-    ...array.slice(0, index),
-    item,
-    ...array.slice(index + 1, array.length)
-  ]
-}
-
 export {
-  shuffle,
-  replaceAtIndex
+  shuffle
 }

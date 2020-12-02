@@ -1,4 +1,4 @@
-import { shuffle, replaceAtIndex } from '../utils';
+import { shuffle } from '../utils';
 
 describe('shuffle', () => {
   test('shuffle empty array', () => {
@@ -20,27 +20,5 @@ describe('shuffle', () => {
     array.forEach(item => {
       expect(shuffledArray.indexOf(item)).not.toBe(-1);
     })
-  });
-});
-
-describe('replaceAtIndex', () => {
-  test('replace in empty array', () => {
-    expect(replaceAtIndex([], 0, "")).toMatchObject([]);
-  });
-
-  test('replace first item', () => {
-    expect(replaceAtIndex([1, 2, 3], 0, 5)).toMatchObject([5, 2, 3]);
-  });
-
-  test('replace last item', () => {
-    expect(replaceAtIndex([1, 2, 3], 2, 5)).toMatchObject([1, 2, 5]);
-  });
-
-  test('replace at negative index', () => {
-    expect(replaceAtIndex([1, 2, 3], -1, 5)).toMatchObject([1, 2, 3]);
-  });
-
-  test('replace out of bound item', () => {
-    expect(replaceAtIndex([1, 2, 3], 10, 5)).toMatchObject([1, 2, 3, 5]);
   });
 });

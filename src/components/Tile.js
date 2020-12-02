@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import tileDefaults from '../images/tileDefaults';
-import { replaceAtIndex } from '../utils';
+import { replaceTilesState } from '../core/grid';
 
 const Card = styled.img`
   object-fit: cover;
@@ -28,12 +28,6 @@ const Tile = ({
   setTries,
   tries
 }) => {
-
-  const checkIdentical = () => {
-    if(currentTiles.length === 2) {
-
-    }
-  }
   const handleClick = () => {
     if(gameState === 'new') {
       startGame();
@@ -41,12 +35,13 @@ const Tile = ({
 
     // Set tile active on click
     if(tile.state === 'idle' && currentTiles.length < 2) {
-      const newTile = Object.assign({}, tile, { state: 'active' });
-      const index = tiles.indexOf(tile);
+      const newTiles = replaceTilesState(tiles, [tile], 'active')
+      setTiles(newTiles);
 
-      setTiles(replaceAtIndex(tiles, index, newTile));
-
-      setCurrentTiles([...currentTiles, newTile]);
+      setCurrentTiles([
+        ...currentTiles,
+        newTiles.find(currentTile => currentTile.index === tile.index)
+      ]);
     }
   }
   const brightness = {

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Tile from "./Tile";
-import { shuffle, replaceAtIndex } from '../utils';
+import { shuffle } from '../utils';
+import { gridIsCompleted } from '../core/grid';
 
 const StyledGrid = styled.div`
   display: grid;
@@ -48,7 +49,7 @@ const Grid = ({
   }
 
   // Check if grid is completed
-  if(tiles.filter(tile => tile.state === 'found').length === tiles.length) {
+  if(gridIsCompleted(tiles)) {
     stopGame();
   }
 

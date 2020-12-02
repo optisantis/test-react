@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import tileDefaults from './images/tileDefaults';
 import { shuffle } from './utils';
+import { replaceTilesState } from './core/grid';
 import Grid from "./components/Grid";
 import Header from "./components/Header"
 
@@ -67,12 +68,7 @@ export default function Memory() {
       setTimeout(function() {
         setCurrentTiles([]);
         setTiles(
-          tiles.map(tile => {
-            if(tile.index === currentTiles[0].index || tile.index === currentTiles[1].index) {
-              return Object.assign({}, tile, { state: newState })
-            }
-            return tile;
-          })
+          replaceTilesState(tiles, currentTiles, newState)
         );
       }, timeoutMs)
     }
