@@ -8,7 +8,7 @@ import onion from "../images/onion.png";
 import strawberry from "../images/strawberry.png";
 
 const defaultTile = {
-  state: 'active'
+  state: 'idle'
 }
 
 export default {

@@ -4,7 +4,7 @@ import { replaceAtIndex } from '../utils';
 
 const Card = styled.img`
   object-fit: cover;
-  background: ${props => props.state === 'idle' ? 'white' : 'red' };
+  background: white;
   padding: 0.2em;
   height: 100%;
   width: 100%;

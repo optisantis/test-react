@@ -38,9 +38,6 @@ export default function Memory() {
   const startGame = () => {
     setGameState('running');
     startTimer();
-    setTiles(tiles.map(tile => {
-      tile.state = 'idle';
-    }))
   }
 
   const stopGame = () => {
