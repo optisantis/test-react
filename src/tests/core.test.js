@@ -44,6 +44,15 @@ describe('replaceTilesState', () => {
     ]);
   });
 
+  test('multiple tiles in list', () => {
+    expect(
+      replaceTilesState([appleTile, appleTile2], [appleTile, appleTile2], 'active')
+    ).toMatchObject([
+      Object.assign({}, appleTile, { state: 'active' }),
+      Object.assign({}, appleTile2, { state: 'active' })
+    ]);
+  });
+
   test('similar tile in list', () => {
     expect(
       replaceTilesState([appleTile], [appleTile2], 'active')
@@ -51,4 +60,16 @@ describe('replaceTilesState', () => {
       appleTile
     ]);
   });
+
+  test('mixed similar tiles in list', () => {
+    expect(
+      replaceTilesState([appleTile, foundTile, activeTile, appleTile2], [appleTile, appleTile2], 'active')
+    ).toMatchObject([
+      Object.assign({}, appleTile, { state: 'active' }),
+      foundTile,
+      activeTile,
+      Object.assign({}, appleTile2, { state: 'active' })
+    ]);
+  });
+
 })
