@@ -8,7 +8,8 @@ import onion from "../images/onion.png";
 import strawberry from "../images/strawberry.png";
 
 const defaultTile = {
-  state: 'idle'
+  state: 'idle',
+  index: "0"
 }
 
 export default {
@@ -19,5 +20,5 @@ export default {
   lemon: Object.assign({ id: 'lemon', image: lemon }, defaultTile),
   lettuce: Object.assign({ id: 'lettuce', image: lettuce }, defaultTile),
   onion: Object.assign({ id: 'onion', image: onion }, defaultTile),
-  strawberry: Object.assign({ id: 'strawberry', image: strawberry }, defaultTile)
+  strawberry: Object.assign({ id: 'strawberry', image: strawberry }, defaultTile),
 };

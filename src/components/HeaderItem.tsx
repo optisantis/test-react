@@ -11,7 +11,12 @@ const Number = styled.p`
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 `;
 
-const HeaderItem = ({ title, number }) => (
+type HeaderItemProps = {
+  title: string,
+  number: any
+}
+
+const HeaderItem = ({ title, number }: HeaderItemProps) => (
   <div>
     <Title>
       { title }

@@ -26,7 +26,19 @@ const ResetInput = styled.input`
   cursor: pointer;
 `;
 
-
+type GridProps = {
+  setTiles: any,
+  tiles: Array<any>,
+  tries: number,
+  setTries: any,
+  gameState: string,
+  setGameState: any,
+  startGame: any,
+  currentTiles: Array<any>,
+  setCurrentTiles: any,
+  resetGame: any,
+  stopGame: any
+}
 
 const Grid = ({
   setTiles,
@@ -40,7 +52,7 @@ const Grid = ({
   setCurrentTiles,
   resetGame,
   stopGame
-}) => {
+}: GridProps) => {
   if(tiles.length === 0) {
     resetGame();
     return(
@@ -58,7 +70,6 @@ const Grid = ({
       <StyledGrid>
         { tiles.map(tile => (
           <Tile
-            tile={ tile }
             {...{
               tile,
               setTiles,

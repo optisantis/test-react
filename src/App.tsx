@@ -10,25 +10,32 @@ const Instructions = styled.p`
   text-align: center;
 `;
 
-
+interface TileInterface {
+  image: string,
+  id: string,
+  index: string,
+  state: string
+}
 
 export default function Memory() {
-  const [gameState, setGameState] = useState('new');
-  const [tries, setTries] = useState(0);
-  const [timer, setTimer] = useState(0);
-  const [timeout, setTo] = useState();
-  const [tiles, setTiles] = useState([]);
-  const [currentTiles, setCurrentTiles] = useState([]);
+  const [gameState, setGameState] = useState<string>('new');
+  const [tries, setTries] = useState<number>(0);
+  const [timer, setTimer] = useState<number>(0);
+  const [timeout, setTo] = useState<number>();
+  const [tiles, setTiles] = useState<Array<TileInterface>>([]);
+  const [currentTiles, setCurrentTiles] = useState<Array<TileInterface>>([]);
 
   // dupplicate default tiles and shuffle
   const resetGrid = () => {
     return shuffle([
       ...Object.keys(tileDefaults),
       ...Object.keys(tileDefaults)
-    ]).map((item, index) => Object.assign({}, tileDefaults[item], { index }));
+    ]).map((item: keyof typeof tileDefaults, index: number) => Object.assign(
+      {}, tileDefaults[item], { item, index })
+    );
   }
 
-  const resetGame = (tiles) => {
+  const resetGame = (tiles: Array<Object>) => {
     setGameState('new');
     setTiles(resetGrid());
     setTries(0);

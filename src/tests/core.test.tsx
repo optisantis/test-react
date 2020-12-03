@@ -23,7 +23,6 @@ describe('replaceTilesState', () => {
     state: 'active'
   }
 
-
   test('empty tiles', () => {
     expect(
       replaceTilesState([], [], '')
