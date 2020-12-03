@@ -11,8 +11,7 @@ const defaultTile = {
   state: 'idle',
   index: "0"
 }
-
-export default {
+const defaultTiles = {
   apple: Object.assign({ id: 'apple', image: apple }, defaultTile),
   avocado: Object.assign({ id: 'avocado', image: avocado }, defaultTile),
   banana: Object.assign({ id: 'banana', image: banana }, defaultTile),
@@ -22,3 +21,4 @@ export default {
   onion: Object.assign({ id: 'onion', image: onion }, defaultTile),
   strawberry: Object.assign({ id: 'strawberry', image: strawberry }, defaultTile),
 };
+export default defaultTiles;

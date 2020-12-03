@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Tile from "./Tile";
-import { shuffle } from '../utils';
 import { gridIsCompleted } from '../core/grid';
 
 const StyledGrid = styled.div`
