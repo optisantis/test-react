@@ -1,12 +1,6 @@
 import _ from 'lodash';
+import TileInterface from '../components/TileInterface';
 
-
-interface TileInterface {
-  image: string,
-  id: string,
-  index: string,
-  state: string
-}
 
 const gridIsCompleted = (tiles: Array<TileInterface>) => {
   return tiles.filter(tile => tile.state === 'found').length === tiles.length;

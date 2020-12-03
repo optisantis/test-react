@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { replaceTilesState } from '../core/grid';
+import TileInterface from './TileInterface';
 
 type CardProps = {
   state: string
@@ -18,7 +19,7 @@ const Card = styled.img`
       return '100';
     }
     if(props.state === "found") {
-      return '0.8';
+      return '0.6';
     }
     if(props.state === "active") {
       return '1';
@@ -30,12 +31,6 @@ const Card = styled.img`
 `;
 
 
-interface TileInterface {
-  image: string,
-  id: string,
-  index: string,
-  state: string
-}
 
 type TileProps = {
   tile: TileInterface,
@@ -68,7 +63,6 @@ const Tile = ({
     // Set tile active on click
     if(tile.state === 'idle' && currentTiles.length < 2) {
       const newTiles = replaceTilesState(tiles, [tile], 'active')
-      console.log(tiles, newTiles);
 
       setTiles(newTiles);
 

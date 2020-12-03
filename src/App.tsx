@@ -5,17 +5,11 @@ import { shuffle } from './utils';
 import { replaceTilesState } from './core/grid';
 import Grid from "./components/Grid";
 import Header from "./components/Header"
+import TileInterface from './components/TileInterface';
 
 const Instructions = styled.p`
   text-align: center;
 `;
-
-interface TileInterface {
-  image: string,
-  id: string,
-  index: string,
-  state: string
-}
 
 export default function Memory() {
   const [gameState, setGameState] = useState<string>('new');
