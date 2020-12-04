@@ -1,3 +1,13 @@
-export default function Memory() {
-  return <main>Votre Memory ici</main>;
-}
+import React from "react";
+
+import MainContent from "./components/MainContent";
+
+const Memory = () => {
+  return (
+    <div>
+      <MainContent />
+    </div>
+  );
+};
+
+export default Memory;
