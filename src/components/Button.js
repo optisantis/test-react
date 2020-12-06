@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../styles";
 
-export default ({ title, onClick }) => <Button onClick={() => onClick}>{title}</Button>;
+export default ({ title, onClick }) => <Button onClick={onClick}>{title}</Button>;
 
 const Button = styled.button`
   border-radius: 3px;

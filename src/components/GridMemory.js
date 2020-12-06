@@ -1,51 +1,82 @@
-import React from "react";
-import Apple from "../images/apple.png";
-import Avocado from "../images/avocado.png";
-import Banana from "../images/banana.png";
-import Corn from "../images/corn.png";
-import Lemon from "../images/lemon.png";
-import Lettuce from "../images/lettuce.png";
-import Onion from "../images/onion.png";
-import Strawberry from "../images/strawberry.png";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import {
+  FULL_CASE_WIDTH,
+  ROW_LENGHT,
+  CASE_WIDTH,
+  CARD_STATE,
+} from "../constants";
 
-const MOCKUP_GRID = [
-  { src: Lettuce },
-  { src: Onion },
-  { src: Avocado },
-  { src: Lemon },
-  { src: Lettuce },
-  { src: Onion },
-  { src: Apple },
-  { src: Lemon },
-  { src: Strawberry },
-  { src: Banana },
-  { src: Strawberry },
-  { src: Corn },
-  { src: Corn },
-  { src: Banana },
-  { src: Apple },
-  { src: Avocado },
-];
-const CASE_WIDTH = 155;
-const ROW_LENGHT = 4;
-const CASE_MARGIN = 10;
-const FULL_CASE_WIDTH = `${CASE_MARGIN + CASE_WIDTH}px`;
+const GridMemory = ({ handleCounter, stopChrono, startChrono, data, setData }) => {
+  const [firstPicked, setFirstPicked] = useState(-1);
+  const [secondPicked, setSecondPicked] = useState(-1);
+  const [cardFound, setCardFound] = useState(0);
 
+  const updateCase = (i) => {
+    if (firstPicked === -1) {
+      data[i].state = CARD_STATE.ACTIVE;
+      setData([...data]);
+      setFirstPicked(i);
+    } else if (secondPicked === -1) {
+      data[i].state = CARD_STATE.ACTIVE;
+      setData([...data]);
+      setSecondPicked(i);
+    }
+  };
 
+  const handleClickOnCase = (i) => {
+    startChrono();
+    if (data[i].state !== CARD_STATE.IDLE) return;
+    if (firstPicked !== -1 && secondPicked !== -1) {
+      data[firstPicked].state = CARD_STATE.IDLE;
+      data[secondPicked].state = CARD_STATE.IDLE;
+      setFirstPicked(-1);
+      setSecondPicked(-1);
+    }
+    updateCase(i);
+    handleCounter();
+  };
 
-const GridMemory = () => {
+  useEffect(() => {
+    if (firstPicked === -1 || secondPicked === -1) return;
+    if (data[firstPicked].src === data[secondPicked].src) {
+      data[firstPicked].state = CARD_STATE.FOUND;
+      data[secondPicked].state = CARD_STATE.FOUND;
+      setData([...data]);
+      setCardFound(cardFound + 2);
+      setFirstPicked(-1);
+      setSecondPicked(-1);
+    }
+  }, [secondPicked]);
+
+  useEffect(() => {
+    console.log(cardFound);
+    console.log(data.length);
+    if (cardFound === data.length) {
+      stopChrono();
+    }
+  }, [cardFound]);
+
+  const renderCard = (e) => {
+    switch (e.state) {
+      case CARD_STATE.ACTIVE:
+        return <img src={e.src} alt="" width="145px" height="145px" />;
+      case CARD_STATE.FOUND:
+        return <ImageFound src={e.src} alt="" width="145px" height="145px" />;
+      default:
+        return null;
+    }
+  };
   return (
     <Grid>
-      {MOCKUP_GRID.map((e) => (
-        <Case src={e}>
-          <img src={e.src} alt="" width="145px" height="145px" />
+      {data.map((e, i) => (
+        <Case onClick={() => handleClickOnCase(i)} key={i}>
+          {renderCard(e)}
         </Case>
       ))}
     </Grid>
   );
 };
-
 
 const Case = styled.div`
   width: ${CASE_WIDTH}px;
@@ -67,5 +98,8 @@ const Grid = styled.div`
   align-content: space-evenly;
 `;
 
+const ImageFound = styled.img`
+  opacity: 0.5;
+`;
 
 export default GridMemory;
