@@ -9,68 +9,44 @@ import strawberryPicture from '../images/strawberry.png'
 
 export const fruitsList = [
     {
-        id: 'lettuce',
-        image: lettucePicture,
-    },
-    {
-        id: 'onion',
-        image: onionPicture,
-    },
-    {
-        id: 'avocado',
-        image: avocadoPicture,
-    },
-    {
-        id: 'lemon',
-        image: lemonPicture,
-    },
-    {
-        id: 'lettuce',
-        image: lettucePicture,
-    },
-    {
-        id: 'onion',
-        image: onionPicture,
-    },
-    {
-        id: 'apple',
+        type: 'apple',
         image: applePicture,
+        status: 'idle',
     },
     {
-        id: 'lemon',
-        image: lemonPicture,
-    },
-    {
-        id: 'strawberry',
-        image: strawberryPicture,
-    },
-    {
-        id: 'banana',
-        image: bananaPicture,
-    },
-    {
-        id: 'strawberry',
-        image: strawberryPicture,
-    },
-    {
-        id: 'corn',
-        image: cornPicture,
-    },
-    {
-        id: 'corn',
-        image: cornPicture,
-    },
-    {
-        id: 'banana',
-        image: bananaPicture,
-    },
-    {
-        id: 'apple',
-        image: applePicture,
-    },
-    {
-        id: 'avocado',
+        type: 'avocado',
         image: avocadoPicture,
+        status: 'idle',
+    },
+    {
+        type: 'banana',
+        image: bananaPicture,
+        status: 'idle',
+    },
+    {
+        type: 'corn',
+        image: cornPicture,
+        status: 'idle',
+    },
+    {
+        type: 'lemon',
+        image: lemonPicture,
+        status: 'idle',
+    },
+    {
+        type: 'lettuce',
+        image: lettucePicture,
+        status: 'idle',
+    },
+    {
+        type: 'onion',
+        image: onionPicture,
+        status: 'idle',
+    },
+    {
+        type: 'strawberry',
+        image: strawberryPicture,
+        status: 'idle',
     },
 ]
 

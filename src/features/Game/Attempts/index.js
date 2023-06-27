@@ -1,6 +1,6 @@
 import React from 'react'
 
-import MainText from '../../../core/MainText'
+import MainText from '../../../core/Ui/MainText'
 
 import { Count } from './styles'
 

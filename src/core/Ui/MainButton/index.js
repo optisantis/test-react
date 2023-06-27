@@ -6,7 +6,7 @@ import { Button } from './styles'
 const MainButton = ({ text, action }) => {
 
   return (
-    <Button onClick={() => action}>
+    <Button onClick={action}>
       {text}
     </Button>
   )
