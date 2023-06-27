@@ -1,0 +1,948 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can reset game 1`] = `
+<body>
+  <div>
+    <main>
+      <div
+        class="header"
+      >
+        <div
+          class="headerInfos"
+        >
+          <div
+            class="headerInfosTime"
+          >
+            <h2
+              class="headerInfosTimeTitle"
+            >
+              Temps
+            </h2>
+            <p
+              class="headerInfosTimeClock"
+            >
+              00
+              :
+              00
+            </p>
+          </div>
+          <div
+            class="headerInfosHits"
+          >
+            <h2
+              class="headerInfosHitsTitle"
+            >
+              Nombre de coups
+            </h2>
+            <p
+              class="headerInfosHitsNumber"
+            >
+              0
+            </p>
+          </div>
+        </div>
+        <p
+          class="headerInstructions"
+        >
+          Cliquez sur une carte pour commencer
+        </p>
+      </div>
+      <div
+        class="memoryTable"
+      >
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+      </div>
+      <button
+        class="resetButton"
+      >
+        Réinitialiser
+      </button>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`display active cards then display found cards when we find a pair 1`] = `
+<body>
+  <div>
+    <main>
+      <div
+        class="header"
+      >
+        <div
+          class="headerInfos"
+        >
+          <div
+            class="headerInfosTime"
+          >
+            <h2
+              class="headerInfosTimeTitle"
+            >
+              Temps
+            </h2>
+            <p
+              class="headerInfosTimeClock"
+            >
+              00
+              :
+              01
+            </p>
+          </div>
+          <div
+            class="headerInfosHits"
+          >
+            <h2
+              class="headerInfosHitsTitle"
+            >
+              Nombre de coups
+            </h2>
+            <p
+              class="headerInfosHitsNumber"
+            >
+              1
+            </p>
+          </div>
+        </div>
+        <p
+          class="headerInstructions"
+        >
+          Cliquez sur une carte pour commencer
+        </p>
+      </div>
+      <div
+        class="memoryTable"
+      >
+        <button
+          class="memoryTableItem memoryTableItemFound"
+          disabled=""
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemFound"
+          disabled=""
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+      </div>
+      <button
+        class="resetButton"
+      >
+        Réinitialiser
+      </button>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`display active cards then display idle cards when we dont find a pair 1`] = `
+<body>
+  <div>
+    <main>
+      <div
+        class="header"
+      >
+        <div
+          class="headerInfos"
+        >
+          <div
+            class="headerInfosTime"
+          >
+            <h2
+              class="headerInfosTimeTitle"
+            >
+              Temps
+            </h2>
+            <p
+              class="headerInfosTimeClock"
+            >
+              00
+              :
+              01
+            </p>
+          </div>
+          <div
+            class="headerInfosHits"
+          >
+            <h2
+              class="headerInfosHitsTitle"
+            >
+              Nombre de coups
+            </h2>
+            <p
+              class="headerInfosHitsNumber"
+            >
+              1
+            </p>
+          </div>
+        </div>
+        <p
+          class="headerInstructions"
+        >
+          Cliquez sur une carte pour commencer
+        </p>
+      </div>
+      <div
+        class="memoryTable"
+      >
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+      </div>
+      <button
+        class="resetButton"
+      >
+        Réinitialiser
+      </button>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`render layout with all cards 1`] = `
+<body>
+  <div>
+    <main>
+      <div
+        class="header"
+      >
+        <div
+          class="headerInfos"
+        >
+          <div
+            class="headerInfosTime"
+          >
+            <h2
+              class="headerInfosTimeTitle"
+            >
+              Temps
+            </h2>
+            <p
+              class="headerInfosTimeClock"
+            >
+              00
+              :
+              00
+            </p>
+          </div>
+          <div
+            class="headerInfosHits"
+          >
+            <h2
+              class="headerInfosHitsTitle"
+            >
+              Nombre de coups
+            </h2>
+            <p
+              class="headerInfosHitsNumber"
+            >
+              0
+            </p>
+          </div>
+        </div>
+        <p
+          class="headerInstructions"
+        >
+          Cliquez sur une carte pour commencer
+        </p>
+      </div>
+      <div
+        class="memoryTable"
+      >
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+      </div>
+      <button
+        class="resetButton"
+      >
+        Réinitialiser
+      </button>
+    </main>
+  </div>
+</body>
+`;
+
+exports[`start clock when playing and count hits 1`] = `
+<body>
+  <div>
+    <main>
+      <div
+        class="header"
+      >
+        <div
+          class="headerInfos"
+        >
+          <div
+            class="headerInfosTime"
+          >
+            <h2
+              class="headerInfosTimeTitle"
+            >
+              Temps
+            </h2>
+            <p
+              class="headerInfosTimeClock"
+            >
+              00
+              :
+              01
+            </p>
+          </div>
+          <div
+            class="headerInfosHits"
+          >
+            <h2
+              class="headerInfosHitsTitle"
+            >
+              Nombre de coups
+            </h2>
+            <p
+              class="headerInfosHitsNumber"
+            >
+              1
+            </p>
+          </div>
+        </div>
+        <p
+          class="headerInstructions"
+        >
+          Cliquez sur une carte pour commencer
+        </p>
+      </div>
+      <div
+        class="memoryTable"
+      >
+        <button
+          class="memoryTableItem memoryTableItemActive"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemActive"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lettuce"
+            src="lettuce.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="onion"
+            src="onion.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="lemon"
+            src="lemon.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="strawberry"
+            src="strawberry.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="corn"
+            src="corn.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="banana"
+            src="banana.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="apple"
+            src="apple.png"
+          />
+        </button>
+        <button
+          class="memoryTableItem memoryTableItemIdle"
+        >
+          <img
+            alt="avocado"
+            src="avocado.png"
+          />
+        </button>
+      </div>
+      <button
+        class="resetButton"
+      >
+        Réinitialiser
+      </button>
+    </main>
+  </div>
+</body>
+`;
